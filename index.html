@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#07080c">
+<title>ROYAL XO | BLACK GOLD</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap');
+:root{--bg:#07080c;--panel:#101219;--panel2:#151923;--gold:#f5c85b;--gold2:#ffdf8a;--cyan:#31e8ff;--pink:#ff4fa3;--muted:#9298a7;--line:rgba(245,200,91,.22);--shadow:0 0 24px rgba(245,200,91,.12),0 0 50px rgba(49,232,255,.05)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;min-height:100%;background:radial-gradient(ellipse at 50% -15%,#252013 0%,#0c0d12 42%,#050609 100%);color:#f7f4ea;font-family:'Cairo',system-ui,sans-serif}body{min-height:100vh;overflow-x:hidden}button,input{font:inherit}button{cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}.app{width:min(100%,560px);min-height:100vh;margin:auto;padding:20px 16px 32px;position:relative}.topline{height:1px;background:linear-gradient(90deg,transparent,var(--gold),var(--cyan),transparent);box-shadow:0 0 12px #e8bd51;margin-bottom:22px}.brand{text-align:center;margin:4px 0 24px}.brand-mark{font-size:12px;letter-spacing:5px;color:var(--cyan);text-shadow:0 0 12px rgba(49,232,255,.7);direction:ltr}.brand h1{direction:ltr;margin:3px 0 0;font-size:clamp(35px,10vw,54px);font-weight:900;letter-spacing:3px;background:linear-gradient(110deg,#fff3c5 8%,#e9b93e 45%,#fff0b5 62%,#9e741c 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 13px rgba(245,200,91,.2))}.brand p{margin:0;color:var(--muted);font-size:12px;letter-spacing:1px}.panel{background:linear-gradient(145deg,rgba(24,27,36,.96),rgba(10,12,17,.97));border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:var(--shadow),inset 0 1px rgba(255,255,255,.035);margin-bottom:15px}.section-title{font-size:17px;font-weight:800;color:var(--gold2);margin:0 0 14px}.field-label{display:block;color:#c7c3b8;font-size:13px;margin:12px 0 7px}.input{width:100%;background:#080a0f;border:1px solid rgba(245,200,91,.28);border-radius:13px;color:#fff;padding:13px 14px;outline:none;direction:rtl;transition:.2s}.input:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(49,232,255,.1),0 0 16px rgba(49,232,255,.12)}.btn{width:100%;border:1px solid rgba(255,223,138,.55);border-radius:14px;padding:13px 16px;font-weight:800;color:#17130a;background:linear-gradient(110deg,#a87919,#f7d778 45%,#d6a735);box-shadow:0 0 18px rgba(245,200,91,.18),inset 0 1px rgba(255,255,255,.55);transition:transform .15s,filter .15s}.btn:active{transform:scale(.98)}.btn.secondary{background:linear-gradient(145deg,#171c26,#0c1018);color:var(--gold2);border-color:rgba(49,232,255,.45);box-shadow:0 0 17px rgba(49,232,255,.08)}.btn.danger{background:linear-gradient(145deg,#351320,#1b0c13);color:#ff9fc9;border-color:rgba(255,79,163,.4)}.btn-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.round-options{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.round-option{border:1px solid rgba(245,200,91,.25);border-radius:12px;background:#0a0c12;color:#b9b4a6;padding:10px 2px;font-weight:800}.round-option.active{color:#101014;background:linear-gradient(135deg,#ffe59a,#c7962d);border-color:#fff0b9;box-shadow:0 0 16px rgba(245,200,91,.25)}.hidden{display:none!important}.status{font-size:13px;color:var(--muted);text-align:center;min-height:22px;margin-top:12px}.status.error{color:#ff7cae}.status.good{color:#8fffd5}.room-code{font-size:36px;letter-spacing:9px;text-align:center;direction:ltr;color:var(--gold2);font-weight:900;text-shadow:0 0 16px rgba(245,200,91,.4);padding:8px 0}.players{display:grid;grid-template-columns:1fr 1fr;gap:10px}.player-card{border:1px solid rgba(245,200,91,.18);border-radius:14px;background:#0b0e14;padding:12px;text-align:center;min-width:0}.player-card .name{font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.player-card .symbol{font-size:26px;font-weight:900;direction:ltr}.symbol.x{color:var(--cyan);text-shadow:0 0 14px rgba(49,232,255,.65)}.symbol.o{color:var(--pink);text-shadow:0 0 14px rgba(255,79,163,.55)}.you{font-size:10px;color:var(--gold);margin-top:2px}.game-head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:14px}.round-pill,.turn-pill{border:1px solid var(--line);background:#0a0c12;border-radius:30px;padding:7px 12px;font-size:12px;color:var(--gold2);white-space:nowrap}.turn-pill{border-color:rgba(49,232,255,.3);color:var(--cyan)}.scoreboard{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;margin-bottom:15px}.score{background:#0b0e14;border:1px solid rgba(245,200,91,.16);border-radius:13px;padding:10px;text-align:center}.score strong{display:block;font-size:26px;line-height:1.25}.score small{font-size:11px;color:var(--muted)}.score-divider{color:var(--gold);font-weight:900}.board{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;direction:ltr;width:min(100%,390px);margin:0 auto 16px;aspect-ratio:1}.cell{border:1px solid rgba(245,200,91,.34);border-radius:17px;background:linear-gradient(145deg,#171b24,#090b10);color:white;font-size:clamp(45px,15vw,76px);font-weight:900;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 20px rgba(255,255,255,.018),0 0 13px rgba(245,200,91,.055);transition:.18s;min-width:0;min-height:0}.cell:disabled{opacity:1;cursor:default}.cell:not(:disabled):active{transform:scale(.96);border-color:var(--cyan)}.cell.x{color:var(--cyan);text-shadow:0 0 8px var(--cyan),0 0 25px rgba(49,232,255,.7);border-color:rgba(49,232,255,.65)}.cell.o{color:var(--pink);text-shadow:0 0 8px var(--pink),0 0 25px rgba(255,79,163,.65);border-color:rgba(255,79,163,.6)}.cell.win{background:linear-gradient(145deg,rgba(245,200,91,.24),rgba(49,232,255,.12));border-color:var(--gold2);box-shadow:0 0 22px rgba(245,200,91,.25)}.message{text-align:center;min-height:28px;font-weight:800;color:var(--gold2);font-size:14px;margin:5px 0 12px}.small-note{text-align:center;color:var(--muted);font-size:11px;line-height:1.8;margin-top:10px}.divider{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);margin:15px 0}.lobby-wait{text-align:center;padding:12px;color:var(--muted);font-size:13px}.spinner{width:23px;height:23px;border:2px solid rgba(245,200,91,.2);border-top-color:var(--gold);border-radius:50%;margin:8px auto;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}.footer{text-align:center;color:#626777;font-size:10px;margin:20px 0 0;direction:ltr;letter-spacing:2px}.toast{position:fixed;z-index:20;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#171b24;border:1px solid var(--gold);border-radius:12px;padding:10px 16px;color:#ffe5a0;box-shadow:0 0 22px rgba(245,200,91,.18);font-size:12px;transition:.25s;max-width:90%;text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(min-width:520px){.app{padding-top:28px}.panel{padding:23px}.board{gap:12px}.cell{border-radius:20px}}
+</style>
+</head>
+<body>
+<div class="app">
+ <div class="topline"></div>
+ <header class="brand"><div class="brand-mark">THE ULTIMATE DUEL</div><h1>ROYAL XO</h1><p>BLACK GOLD • NEON EDITION</p></header>
+
+ <section id="homeScreen">
+  <div class="panel">
+   <h2 class="section-title">إنشاء غرفة جديدة</h2>
+   <label class="field-label" for="hostName">اسمك داخل اللعبة</label>
+   <input id="hostName" class="input" maxlength="18" placeholder="اكتب اسمك" autocomplete="nickname">
+   <label class="field-label">عدد الجولات</label>
+   <div class="round-options" id="roundOptions">
+    <button class="round-option" data-rounds="3">3</button><button class="round-option active" data-rounds="5">5</button><button class="round-option" data-rounds="7">7</button><button class="round-option" data-rounds="9">9</button>
+   </div>
+   <div style="font-size:11px;color:var(--muted);margin:8px 0 13px">الفوز بالمباراة يتطلب أغلبية الانتصارات.</div>
+   <button id="createBtn" class="btn">إنشاء غرفة</button>
+  </div>
+  <div class="panel">
+   <h2 class="section-title">الانضمام إلى غرفة</h2>
+   <label class="field-label" for="guestName">اسمك داخل اللعبة</label>
+   <input id="guestName" class="input" maxlength="18" placeholder="اكتب اسمك" autocomplete="nickname">
+   <label class="field-label" for="roomCodeInput">كود الغرفة المكوّن من 4 أرقام</label>
+   <input id="roomCodeInput" class="input" inputmode="numeric" maxlength="4" placeholder="0000" style="text-align:center;direction:ltr;letter-spacing:8px;font-size:22px">
+   <button id="joinBtn" class="btn secondary" style="margin-top:13px">دخول الغرفة</button>
+  </div>
+  <div id="homeStatus" class="status" role="status" aria-live="polite"></div>
+ </section>
+
+ <section id="roomScreen" class="hidden">
+  <div class="panel">
+   <h2 class="section-title" id="roomTitle">غرفتك جاهزة</h2>
+   <div class="room-code" id="roomCodeDisplay">----</div>
+   <button id="copyCodeBtn" class="btn secondary">نسخ كود الغرفة</button>
+   <div class="divider"></div>
+   <div class="players">
+    <div class="player-card"><div class="symbol x">X</div><div class="name" id="hostNameDisplay">المضيف</div><div class="you" id="hostYou"></div></div>
+    <div class="player-card"><div class="symbol o">O</div><div class="name" id="guestNameDisplay">في انتظار اللاعب...</div><div class="you" id="guestYou"></div></div>
+   </div>
+   <div id="lobbyWait" class="lobby-wait"><div class="spinner"></div>في انتظار انضمام اللاعب الثاني</div>
+   <button id="startBtn" class="btn hidden" style="margin-top:14px">ابدأ المباراة</button>
+   <div id="roomStatus" class="status" role="status" aria-live="polite"></div>
+  </div>
+  <button id="leaveRoomBtn" class="btn danger">العودة للقائمة</button>
+ </section>
+
+ <section id="gameScreen" class="hidden">
+  <div class="panel">
+   <div class="game-head"><div class="round-pill" id="roundLabel">الجولة 1</div><div class="turn-pill" id="turnLabel">الدور: X</div></div>
+   <div class="scoreboard">
+    <div class="score"><strong class="symbol x" id="xScore">0</strong><small id="xPlayerLabel">لاعب X</small></div>
+    <div class="score-divider">VS</div>
+    <div class="score"><strong class="symbol o" id="oScore">0</strong><small id="oPlayerLabel">لاعب O</small></div>
+   </div>
+   <div class="board" id="board" aria-label="لوحة إكس أو">
+    <button class="cell" data-cell="0" aria-label="الخانة 1"></button><button class="cell" data-cell="1" aria-label="الخانة 2"></button><button class="cell" data-cell="2" aria-label="الخانة 3"></button>
+    <button class="cell" data-cell="3" aria-label="الخانة 4"></button><button class="cell" data-cell="4" aria-label="الخانة 5"></button><button class="cell" data-cell="5" aria-label="الخانة 6"></button>
+    <button class="cell" data-cell="6" aria-label="الخانة 7"></button><button class="cell" data-cell="7" aria-label="الخانة 8"></button><button class="cell" data-cell="8" aria-label="الخانة 9"></button>
+   </div>
+   <div class="message" id="gameMessage" aria-live="polite">ابدأ اللعب!</div>
+   <button id="nextRoundBtn" class="btn hidden">الجولة التالية</button>
+   <button id="backToRoomBtn" class="btn secondary hidden" style="margin-top:10px">مباراة جديدة</button>
+   <div class="small-note" id="gameHint">أنت تلعب بالرمز X</div>
+  </div>
+  <button id="exitGameBtn" class="btn danger">الخروج إلى القائمة</button>
+ </section>
+ <div class="footer">ROYAL XO • PLAY WITH HONOR</div>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+<script>
+'use strict';
+
+// نفس إعدادات Firebase المستخدمة في NEON DRAW.
+const firebaseConfig = {
+ apiKey: "AIzaSyD7WYn9T1-r2NlF-kMcuQWN07T5wxQRcbw",
+ authDomain: "ddmm-d24cf.firebaseapp.com",
+ databaseURL: "https://ddmm-d24cf-default-rtdb.firebaseio.com",
+ projectId: "ddmm-d24cf",
+ storageBucket: "ddmm-d24cf.firebasestorage.app",
+ messagingSenderId: "1070949465971",
+ appId: "1:1070949465971:web:ca001b27495aaa984b4f06"
+};
+
+const $ = (id) => document.getElementById(id);
+const roomRoot = 'draw-rooms'; // مسار الغرف الأصلي نفسه في NEON DRAW.
+let db = null;
+let selectedRounds = 5;
+let currentRoomCode = null;
+let currentRoomRef = null;
+let roomListener = null;
+let myPlayerId = null;
+let myRole = null;
+let myName = '';
+let roomData = null;
+let gameData = null;
+let busy = false;
+let toastTimer = null;
+
+function makeId(){
+ try { if (window.crypto && typeof window.crypto.randomUUID === 'function') return window.crypto.randomUUID(); } catch(e) {}
+ return 'p_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2,12);
+}
+function getPlayerId(){
+ try {
+  let id = localStorage.getItem('royal_xo_player_id');
+  if (!id) { id = makeId(); localStorage.setItem('royal_xo_player_id', id); }
+  return id;
+ } catch(e) { return makeId(); }
+}
+function cleanName(value){ return String(value || '').trim().replace(/[<>]/g,'').slice(0,18); }
+function showStatus(id, message, type=''){
+ const el = $(id); if (!el) return;
+ el.textContent = message || ''; el.className = 'status' + (type ? ' ' + type : '');
+}
+function toast(message){
+ const el = $('toast'); el.textContent = message; el.classList.add('show');
+ clearTimeout(toastTimer); toastTimer = setTimeout(()=>el.classList.remove('show'),2400);
+}
+function setBusy(value){
+ busy = value;
+ $('createBtn').disabled = value; $('joinBtn').disabled = value;
+ $('createBtn').textContent = value ? 'يرجى الانتظار...' : 'إنشاء غرفة';
+ $('joinBtn').textContent = value ? 'جارٍ الدخول...' : 'دخول الغرفة';
+}
+function showScreen(name){
+ ['homeScreen','roomScreen','gameScreen'].forEach(id => $(id).classList.toggle('hidden', id !== name));
+}
+function initFirebase(){
+ if (db) return db;
+ if (!window.firebase || !firebase.database) throw new Error('تعذر تحميل Firebase. تأكد من اتصال الإنترنت ثم أعد فتح اللعبة.');
+ if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
+ db = firebase.database();
+ return db;
+}
+function detachRoomListener(){
+ if (currentRoomRef && roomListener) currentRoomRef.off('value', roomListener);
+ roomListener = null;
+}
+function clearSession(){
+ detachRoomListener(); currentRoomCode = null; currentRoomRef = null;
+ roomData = null; gameData = null; myRole = null; myName = '';
+}
+function newGameState(rounds, hostId, guestId){
+ return {
+  roundsLimit: rounds,
+  targetWins: Math.floor(rounds/2)+1,
+  roundNumber: 1,
+  scores: {X:0,O:0},
+  board: ['','','','','','','','',''],
+  currentTurn: 'X',
+  roundStatus: 'active',
+  roundWinner: null,
+  winningCells: [],
+  matchWinner: null,
+  xPlayerId: hostId,
+  oPlayerId: guestId,
+  updatedAt: Date.now()
+ };
+}
+function attachRoomListener(){
+ detachRoomListener();
+ roomListener = (snapshot) => {
+  if (!snapshot.exists()) {
+   toast('الغرفة لم تعد موجودة.'); clearSession(); showScreen('homeScreen'); return;
+  }
+  roomData = snapshot.val() || {};
+  // لا نسمح بخلط غرف XO مع غرف لعبة أخرى تشترك في مسار الغرف نفسه.
+  if (roomData.gameType !== 'royal-xo') {
+   toast('هذا الكود تابع للعبة أخرى.'); clearSession(); showScreen('homeScreen'); return;
+  }
+  if (roomData.hostId === myPlayerId) myRole = 'X';
+  else if (roomData.guestId === myPlayerId) myRole = 'O';
+  else if (roomData.host === true && !roomData.hostId && myRole === 'X') {}
+  else if (roomData.guest === true && !roomData.guestId && myRole === 'O') {}
+  gameData = roomData.gameState || null;
+  renderRoom();
+ };
+ currentRoomRef.on('value', roomListener, (error)=>{
+  console.error('Room listener error:', error);
+  toast('حدث خطأ في الاتصال بالغرفة.');
+ });
+}
+function renderRoom(){
+ if (!roomData) return;
+ $('roomCodeDisplay').textContent = currentRoomCode || '----';
+ $('hostNameDisplay').textContent = roomData.hostName || 'المضيف';
+ $('guestNameDisplay').textContent = roomData.guestName || (roomData.guest ? 'اللاعب الثاني' : 'في انتظار اللاعب...');
+ $('hostYou').textContent = myRole === 'X' ? 'أنت • X' : '';
+ $('guestYou').textContent = myRole === 'O' ? 'أنت • O' : '';
+ const joined = roomData.guest === true;
+ $('lobbyWait').classList.toggle('hidden', joined);
+ $('startBtn').classList.toggle('hidden', !(myRole === 'X' && joined && !gameData));
+ $('startBtn').disabled = busy;
+ if (gameData) {
+  showScreen('gameScreen'); renderGame();
+ } else {
+  showScreen('roomScreen');
+  $('roomTitle').textContent = joined ? 'الغرفة جاهزة للمباراة' : 'غرفتك جاهزة';
+  showStatus('roomStatus', joined ? 'اللاعبان متصلان. المضيف يمكنه بدء المباراة.' : 'أرسل الكود إلى صديقك وانتظر انضمامه.');
+ }
+}
+async function createRoom(){
+ if (busy) return;
+ myName = cleanName($('hostName').value);
+ if (!myName) { showStatus('homeStatus','اكتب اسمك أولًا.','error'); return; }
+ setBusy(true); showStatus('homeStatus','جارٍ إنشاء الغرفة...');
+ try {
+  const database = initFirebase();
+  let code = '';
+  let created = false;
+  // إنشاء كود غير مستخدم، مع إعادة المحاولة عند التصادم.
+  for (let attempt=0; attempt<12 && !created; attempt++) {
+   code = String(Math.floor(1000 + Math.random()*9000));
+   const candidate = database.ref(roomRoot + '/' + code);
+   const snap = await candidate.once('value');
+   if (!snap.exists()) {
+    const room = {
+     gameType: 'royal-xo',
+     host: true,
+     guest: false,
+     status: 'waiting',
+     hostName: myName,
+     hostId: myPlayerId,
+     guestName: '',
+     guestId: '',
+     roundsLimit: selectedRounds,
+     startTime: Date.now(),
+     createdAt: Date.now(),
+     gameState: null
+    };
+    await candidate.set(room);
+    currentRoomCode = code; currentRoomRef = candidate; myRole = 'X'; created = true;
+   }
+  }
+  if (!created) throw new Error('لم نتمكن من إنشاء كود متاح. حاول مرة أخرى.');
+  attachRoomListener(); showScreen('roomScreen'); renderRoom();
+  showStatus('roomStatus','تم إنشاء الغرفة بنجاح. أرسل الكود لصديقك.','good');
+ } catch(error) {
+  console.error(error); showStatus('homeStatus', error.message || 'فشل إنشاء الغرفة. تحقق من اتصالك.', 'error');
+ } finally { setBusy(false); }
+}
+async function joinRoom(){
+ if (busy) return;
+ myName = cleanName($('guestName').value);
+ const code = $('roomCodeInput').value.trim();
+ if (!myName) { showStatus('homeStatus','اكتب اسمك أولًا.','error'); return; }
+ if (!/^\d{4}$/.test(code)) { showStatus('homeStatus','اكتب كودًا صحيحًا من 4 أرقام.','error'); return; }
+ setBusy(true); showStatus('homeStatus','جارٍ البحث عن الغرفة...');
+ try {
+  const database = initFirebase();
+  const ref = database.ref(roomRoot + '/' + code);
+  // طريقة دخول NEON DRAW الأصلية: once ثم فحص guest ثم update، دون تغييرها.
+  const snapshot = await ref.once('value');
+  const data = snapshot.val();
+  if (!data || data.guest) throw new Error('الغرفة غير موجودة أو مكتملة.');
+  if (data.gameType !== 'royal-xo') throw new Error('هذا الكود غير صالح لهذه اللعبة.');
+  await ref.update({guest:true, status:'playing', startTime:Date.now(), guestName:myName, guestId:myPlayerId, gameType:'royal-xo'});
+  currentRoomCode = code; currentRoomRef = ref; myRole = 'O';
+  attachRoomListener(); showScreen('roomScreen');
+  showStatus('roomStatus','تم الانضمام بنجاح. في انتظار بدء المضيف.','good');
+ } catch(error) {
+  console.error(error); showStatus('homeStatus',error.message || 'تعذر دخول الغرفة. حاول مرة أخرى.','error');
+ } finally { setBusy(false); }
+}
+async function startMatch(){
+ if (!currentRoomRef || myRole !== 'X' || busy || !roomData || !roomData.guest) return;
+ if (gameData) return;
+ busy = true; $('startBtn').disabled = true;
+ try {
+  const rounds = Number(roomData.roundsLimit) || 5;
+  const state = newGameState(rounds, roomData.hostId || myPlayerId, roomData.guestId || 'guest');
+  await currentRoomRef.child('gameState').set(state);
+  await currentRoomRef.update({status:'playing'});
+ } catch(error) { console.error(error); toast('تعذر بدء المباراة. حاول مجددًا.'); }
+ finally { busy = false; $('startBtn').disabled = false; }
+}
+const WIN_LINES = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+function evaluateBoard(board){
+ for (const line of WIN_LINES) {
+  const [a,b,c] = line;
+  if (board[a] && board[a] === board[b] && board[a] === board[c]) return {winner:board[a],cells:line};
+ }
+ if (board.every(Boolean)) return {winner:'draw',cells:[]};
+ return null;
+}
+async function playCell(index){
+ if (!currentRoomRef || !gameData || gameData.roundStatus !== 'active' || gameData.matchWinner || busy) return;
+ if (!Number.isInteger(index) || index<0 || index>8) return;
+ const role = myRole;
+ if (!role || gameData.currentTurn !== role || gameData.board[index]) return;
+ busy = true;
+ try {
+  const stateRef = currentRoomRef.child('gameState');
+  await stateRef.transaction((current)=>{
+   if (!current || current.roundStatus !== 'active' || current.matchWinner) return;
+   const board = Array.isArray(current.board) ? current.board.slice(0,9) : [];
+   while (board.length<9) board.push('');
+   if (current.currentTurn !== role || board[index]) return;
+   board[index] = role;
+   const result = evaluateBoard(board);
+   const next = {...current, board, updatedAt:Date.now()};
+   if (result) {
+    next.roundStatus = 'finished';
+    next.roundWinner = result.winner;
+    next.winningCells = result.cells;
+    if (result.winner === 'X' || result.winner === 'O') {
+     next.scores = {...(current.scores || {X:0,O:0})};
+     next.scores[result.winner] = (Number(next.scores[result.winner]) || 0) + 1;
+     if (next.scores[result.winner] >= Number(current.targetWins || 3)) next.matchWinner = result.winner;
+    }
+   } else {
+    next.currentTurn = role === 'X' ? 'O' : 'X';
+   }
+   return next;
+  }, undefined, false);
+ } catch(error) { console.error(error); toast('لم يتم تسجيل الحركة. تحقق من الاتصال.'); }
+ finally { busy = false; }
+}
+async function nextRound(){
+ if (!currentRoomRef || myRole !== 'X' || !gameData || gameData.roundStatus !== 'finished' || gameData.matchWinner || busy) return;
+ busy = true; $('nextRoundBtn').disabled = true;
+ try {
+  await currentRoomRef.child('gameState').transaction((current)=>{
+   if (!current || current.roundStatus !== 'finished' || current.matchWinner) return;
+   return {...current, roundNumber:(Number(current.roundNumber)||1)+1, board:['','','','','','','','',''], currentTurn:'X', roundStatus:'active', roundWinner:null, winningCells:[], updatedAt:Date.now()};
+  }, undefined, false);
+ } catch(error) { console.error(error); toast('تعذر بدء الجولة التالية.'); }
+ finally { busy = false; $('nextRoundBtn').disabled = false; }
+}
+function renderGame(){
+ if (!gameData) return;
+ const scores = gameData.scores || {X:0,O:0};
+ const board = Array.isArray(gameData.board) ? gameData.board : ['','','','','','','','',''];
+ $('roundLabel').textContent = 'الجولة ' + (gameData.roundNumber || 1) + ' من ' + (gameData.roundsLimit || roomData.roundsLimit || 5);
+ $('xScore').textContent = Number(scores.X)||0; $('oScore').textContent = Number(scores.O)||0;
+ $('xPlayerLabel').textContent = (roomData.hostName || 'لاعب X') + (myRole==='X'?' • أنت':'');
+ $('oPlayerLabel').textContent = (roomData.guestName || 'لاعب O') + (myRole==='O'?' • أنت':'');
+ $('turnLabel').textContent = gameData.roundStatus === 'active' ? 'الدور: ' + gameData.currentTurn : 'انتهت الجولة';
+ $('gameHint').textContent = myRole==='X' ? 'أنت تلعب بالرمز X' : 'أنت تلعب بالرمز O';
+ const winning = Array.isArray(gameData.winningCells) ? gameData.winningCells : [];
+ document.querySelectorAll('.cell').forEach((button)=>{
+  const i = Number(button.dataset.cell); const value = board[i] || '';
+  button.textContent = value;
+  button.className = 'cell' + (value ? ' '+value.toLowerCase() : '') + (winning.includes(i) ? ' win' : '');
+  button.disabled = !!value || gameData.roundStatus !== 'active' || gameData.currentTurn !== myRole || !!gameData.matchWinner;
+ });
+ const message = $('gameMessage');
+ if (gameData.matchWinner) {
+  const winnerName = gameData.matchWinner==='X' ? roomData.hostName : roomData.guestName;
+  message.textContent = '🏆 ' + (winnerName || 'الفائز') + ' فاز بالمباراة!';
+ } else if (gameData.roundStatus === 'finished') {
+  if (gameData.roundWinner === 'draw') message.textContent = 'تعادل! لا توجد نقطة لأي لاعب.';
+  else {
+   const winnerName = gameData.roundWinner==='X' ? roomData.hostName : roomData.guestName;
+   message.textContent = 'فاز ' + (winnerName || gameData.roundWinner) + ' بهذه الجولة!';
+  }
+ } else {
+  message.textContent = gameData.currentTurn === myRole ? 'دورك الآن، اختر خانة.' : 'انتظر دور اللاعب الآخر...';
+ }
+ $('nextRoundBtn').classList.toggle('hidden', !(myRole==='X' && gameData.roundStatus==='finished' && !gameData.matchWinner));
+ $('nextRoundBtn').disabled = busy;
+ $('backToRoomBtn').classList.toggle('hidden', !(gameData.matchWinner && myRole==='X'));
+}
+async function returnToLobby(){
+ if (!currentRoomRef || myRole!=='X' || busy) return;
+ // لا نمسح نقاط المباراة؛ نهيئ لعبة جديدة بنفس إعدادات الغرفة.
+ busy = true;
+ try {
+  const rounds = Number(gameData && gameData.roundsLimit) || Number(roomData.roundsLimit) || 5;
+  const fresh = newGameState(rounds, roomData.hostId || myPlayerId, roomData.guestId || 'guest');
+  await currentRoomRef.child('gameState').set(fresh);
+ } catch(error) { console.error(error); toast('تعذر إعادة المباراة.'); }
+ finally { busy = false; }
+}
+function leaveToHome(){
+ clearSession(); showScreen('homeScreen'); showStatus('homeStatus','');
+}
+
+// اختيار عدد الجولات.
+document.querySelectorAll('.round-option').forEach(button=>button.addEventListener('click',()=>{
+ document.querySelectorAll('.round-option').forEach(b=>b.classList.remove('active'));
+ button.classList.add('active'); selectedRounds = Number(button.dataset.rounds);
+}));
+$('createBtn').addEventListener('click',createRoom);
+$('joinBtn').addEventListener('click',joinRoom);
+$('startBtn').addEventListener('click',startMatch);
+$('copyCodeBtn').addEventListener('click',async()=>{
+ if (!currentRoomCode) return;
+ try { await navigator.clipboard.writeText(currentRoomCode); toast('تم نسخ كود الغرفة.'); }
+ catch(e) { const temp=document.createElement('textarea'); temp.value=currentRoomCode; document.body.appendChild(temp); temp.select(); try{document.execCommand('copy');toast('تم نسخ كود الغرفة.')}catch(err){toast('الكود: '+currentRoomCode)} temp.remove(); }
+});
+$('leaveRoomBtn').addEventListener('click',leaveToHome);
+$('exitGameBtn').addEventListener('click',leaveToHome);
+$('nextRoundBtn').addEventListener('click',nextRound);
+$('backToRoomBtn').addEventListener('click',returnToLobby);
+document.querySelectorAll('.cell').forEach(button=>button.addEventListener('click',()=>playCell(Number(button.dataset.cell))));
+$('roomCodeInput').addEventListener('input',e=>{e.target.value=e.target.value.replace(/\D/g,'').slice(0,4)});
+$('hostName').addEventListener('keydown',e=>{if(e.key==='Enter')createRoom()});
+$('guestName').addEventListener('keydown',e=>{if(e.key==='Enter')$('roomCodeInput').focus()});
+$('roomCodeInput').addEventListener('keydown',e=>{if(e.key==='Enter')joinRoom()});
+
+myPlayerId = getPlayerId();
+// فحص توفر المكتبات دون إيقاف تحميل الواجهة.
+window.addEventListener('online',()=>toast('عاد الاتصال بالإنترنت.'));
+window.addEventListener('offline',()=>toast('الاتصال بالإنترنت منقطع.'));
+</script>
+</body>
+</html>
